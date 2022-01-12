@@ -1,15 +1,15 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">Navbar scroll</a>
+      <a class="navbar-brand" href="/"><img src="assets/iguana_logo.jpeg" alt="" width="30"></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
       <div class="collapse navbar-collapse" id="navbarScroll">
         <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active" aria-current="page" href="/">Menu</a>
           </li>
-          <li class="nav-item">
+          <!--<li class="nav-item">
             <a class="nav-link" href="#">Link</a>
           </li>
           <li class="nav-item dropdown">
@@ -25,11 +25,12 @@
           </li>
           <li class="nav-item">
             <a class="nav-link disabled">Link</a>
-          </li>
+          </li>-->
         </ul>
         <form class="d-flex">
-          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-          <button class="btn btn-outline-success" type="submit">Search</button>
+          <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+          <a routerLink="/carrito" class="btn btn-outline-success" type="submit" style="margin-right: 5px;"><i class="fa fa-shopping-cart"></i> Carrito</a> 
+          <a routerLink="/login" class="btn btn-outline-success" type="submit"><i class="fa fa-user"></i> Ingresar</a>
         </form>
       </div>
     </div>

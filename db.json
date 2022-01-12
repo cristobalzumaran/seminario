@@ -1,0 +1,58 @@
+{
+  "usuarios": [
+    {
+      "id": 1,
+      "nombre": "Emilio",
+      "apellido": "Silva",
+      "direccion": "Ohiggins 225",
+      "comuna": "Concepcion",
+      "ciudad": "Concepcion",
+      "celular": "569645842",
+      "email": "efsilvay@gmail.com"
+    }
+  ],
+  "menu": [
+    {
+      "id": 1,
+      "item": "Pichanga",
+      "valor": 10000,
+      "ingredientes": "carne de vacuno, longaniza, huevo cocido, tomate, queso fundido, palta",
+      "imagen": "pichanga"
+    },
+    {
+      "id": 2,
+      "item": "Completo",
+      "valor": 2000,
+      "ingredientes": "salchicha, tomate, palta, chucrut, mayonesa",
+      "imagen": "completo"
+    },
+    {
+      "id": 3,
+      "item": "Chorrillana",
+      "valor": 10000,
+      "ingredientes": "cebolla, huevo, papas, carne de vacuno",
+      "imagen": "chorrillana"
+    },
+    {
+      "id": 4,
+      "item": "Bebidas 500CC variedades",
+      "valor": 1000,
+      "ingredientes": "cebolla, huevo, papas, carne de vacuno",
+      "imagen": "bebidas"
+    },
+    {
+      "id": 5,
+      "item": "Barros luco",
+      "valor": 5000,
+      "ingredientes": "carne de vacuno, queso chanco, pimienta",
+      "imagen": "barros-luco"
+    },
+    {
+      "id": 6,
+      "item": "Sandwich la iguana",
+      "valor": 5000,
+      "ingredientes": "carne de vacuno, queso, pimienta, palta, mayonesa",
+      "imagen": "la_iguana"
+    }
+  ]
+}
