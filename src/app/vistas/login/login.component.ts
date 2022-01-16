@@ -90,6 +90,7 @@ export class LoginComponent implements OnInit {
         if (this.allUsuarios[i].email == this.usuario.email && this.allUsuarios[i].password == this.usuario.password) {
           console.log("usuario encontrado");
           this.sS.login();
+          localStorage.setItem('userId', this.allUsuarios[i].id);
           this.router.navigate(['/menu']);
         }
       }
