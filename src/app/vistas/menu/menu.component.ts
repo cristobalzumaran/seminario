@@ -15,10 +15,11 @@ export class MenuComponent implements OnInit {
   constructor(private _http: HttpClient, private sS:ServiceService) { }
 
   ngOnInit() {
-    this.cargarLaboratistas();
+    //window.location.reload();
+    this.cargarMenu();
   }
 
-  cargarLaboratistas() {
+  cargarMenu() {
     return this.sS.getMenu().subscribe((data: {}) => {
       this.allDatos = data;
       console.log(this.allDatos)

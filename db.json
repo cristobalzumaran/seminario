@@ -8,7 +8,21 @@
       "comuna": "Concepcion",
       "ciudad": "Concepcion",
       "celular": "569645842",
-      "email": "efsilvay@gmail.com"
+      "email": "efsilvay@gmail.com",
+      "password": ""
+    },
+    {
+      "rut": 156038822,
+      "nombre": "Emilio",
+      "apellido": "Silva",
+      "direccion": "Calle 2",
+      "comuna": "Chiguayante",
+      "ciudad": "Concepcion",
+      "telefono": "964 96 66 78",
+      "celular": "964966678",
+      "email": "miloshka@gmail.com",
+      "password": "12345",
+      "id": 2
     }
   ],
   "menu": [

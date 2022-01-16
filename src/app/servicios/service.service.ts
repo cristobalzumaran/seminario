@@ -2,13 +2,14 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { environment } from '../../environments/environment';
 import { Observable } from 'rxjs';
+import { Router } from '@angular/router';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ServiceService {
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient, private router: Router) { }
 
   getUsuarios(){
     return this.http.get<Array<Usuarios>>(environment.rest.usuarios);
@@ -33,10 +34,25 @@ export class ServiceService {
   getMenu(){
     return this.http.get<Array<Menu>>(environment.rest.menu);
   }
+
+  login() {
+    localStorage.setItem('token', 'LOGGED_IN');
+    //this.router.navigate(['/menu']);
+  }
+
+  register() {
+    localStorage.setItem('token', 'LOGGED_IN');
+    this.router.navigate(['/']);
+  }
+
+  logout() {
+    localStorage.removeItem('token');
+    this.router.navigate(['/login']);
+  }
 }
 
 export interface Usuarios {
-  id: number,
+  id?: number,
   rut: string,
   nombre: string,
   apellido: string,
@@ -45,7 +61,8 @@ export interface Usuarios {
   ciudad: string,
   telefono: number,
   celular: number,
-  email: string
+  email: string,
+  password: string
 }
 
 export interface Menu {
