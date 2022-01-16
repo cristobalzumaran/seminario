@@ -3,6 +3,7 @@ import { ServiceService } from 'src/app/servicios/service.service';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-login',
@@ -25,7 +26,7 @@ export class LoginComponent implements OnInit {
   public loginForm: FormGroup;
 
   constructor(private sS: ServiceService, private ngZone: NgZone,
-    private router: Router) { }
+    private router: Router, private toastr: ToastrService) { }
 
   ngOnInit(): void {
     this.loginForm = new FormGroup({
@@ -89,6 +90,7 @@ export class LoginComponent implements OnInit {
         console.log(this.allUsuarios[i].password);
         if (this.allUsuarios[i].email == this.usuario.email && this.allUsuarios[i].password == this.usuario.password) {
           console.log("usuario encontrado");
+          this.toastr.success('Usuario Logeado', 'Información');
           this.sS.login();
           localStorage.setItem('userId', this.allUsuarios[i].id);
           this.router.navigate(['/menu']);

@@ -35,6 +35,20 @@ export class ServiceService {
     return this.http.get<Array<Menu>>(environment.rest.menu);
   }
 
+  getCarrito(){
+    return this.http.get<Array<Menu>>(environment.rest.carrito);
+  }
+
+  agregaCarrito(body: any) {
+    console.log('recibido: ', body)
+    return this.http.post<Carro>(environment.rest.carrito, body);
+    
+  }
+
+  eliminaCarro(id: any): Observable<Carro>{
+    return this.http.delete<Carro>(`${environment.rest.carrito}/${id}`);
+  }
+
   login() {
     localStorage.setItem('token', 'LOGGED_IN');
     //this.router.navigate(['/menu']);
@@ -70,6 +84,14 @@ export interface Menu {
   id: number,
   item: string,
   valor:number,
-  ingredientes:[string],
+  ingredientes:string,
+  imagen: string
+}
+
+export interface Carro {
+  id?: number,
+  item: string,
+  valor:number,
+  ingredientes:string,
   imagen: string
 }

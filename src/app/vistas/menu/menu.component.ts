@@ -12,7 +12,14 @@ export class MenuComponent implements OnInit {
 
   allDatos: any = [];
 
-  constructor(private _http: HttpClient, private sS:ServiceService) { }
+  carro = {
+    item: null,
+    imagen: null,
+    ingredientes: null,
+    valor: null
+  }
+
+  constructor(private sS:ServiceService, private http: HttpClient) { }
 
   ngOnInit() {
     //window.location.reload();
@@ -25,6 +32,23 @@ export class MenuComponent implements OnInit {
       console.log(this.allDatos)
     });
 
+  }
+
+  guardarCarrito(item:any, valor: any,ingredientes: any, imagen: any){
+    this.carro.item = item;
+    this.carro.valor = valor;
+    this.carro.ingredientes = ingredientes;
+    this.carro.imagen = imagen;
+    console.log('valor a ingresar: ',this.carro);
+    return this.sS.agregaCarrito(this.carro)
+    .subscribe(
+      (datos: any) => {
+        console.log('usuario ingresado con éxito', 'Confirmación');
+      },
+      (err: any) => {
+        console.log('Hubo un error en el envío, favor intentar nuevamente', 'Error');
+      }
+    );;
   }
 
 }
