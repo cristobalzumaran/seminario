@@ -21,12 +21,15 @@ export class CarritoComponent implements OnInit {
   allDatos: any = [];
   total: number = 0;
 
+  todayDate : Date = new Date();
+
   //app = angular.module('app' , ['htmlToPdfSave']) ;
 
   constructor(private sS:ServiceService, private toastr: ToastrService) { }
 
   ngOnInit() {
     this.cargarCarrito();
+
   }
 
   cargarCarrito() {

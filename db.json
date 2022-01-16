@@ -69,5 +69,27 @@
       "imagen": "la_iguana"
     }
   ],
-  "carrito": []
+  "carrito": [
+    {
+      "item": "Pichanga",
+      "imagen": "pichanga",
+      "ingredientes": "carne de vacuno, longaniza, huevo cocido, tomate, queso fundido, palta",
+      "valor": 10000,
+      "id": 1
+    },
+    {
+      "item": "Completo",
+      "imagen": "completo",
+      "ingredientes": "salchicha, tomate, palta, chucrut, mayonesa",
+      "valor": 2000,
+      "id": 2
+    },
+    {
+      "item": "Barros luco",
+      "imagen": "barros-luco",
+      "ingredientes": "carne de vacuno, queso chanco, pimienta",
+      "valor": 5000,
+      "id": 3
+    }
+  ]
 }
